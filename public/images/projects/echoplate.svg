@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="EchoPlate">
+  <defs>
+    <linearGradient id="ep-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0c1a"/>
+      <stop offset="100%" stop-color="#1a1408"/>
+    </linearGradient>
+    <linearGradient id="ep-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#ep-bg)"/>
+  <!-- Plate -->
+  <g transform="translate(160,170)">
+    <circle r="86" fill="none" stroke="#d946ef" stroke-width="1.5" opacity="0.6"/>
+    <circle r="68" fill="#1a0c1a" stroke="#d946ef" stroke-width="1"/>
+    <g fill="#f59e0b">
+      <circle cx="-20" cy="-12" r="14"/>
+      <circle cx="18" cy="-6" r="10" fill="#22d3ee"/>
+      <circle cx="-6" cy="22" r="12" fill="#10b981"/>
+      <circle cx="28" cy="18" r="8" fill="#d946ef"/>
+    </g>
+    <text y="60" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#f59e0b">ORDER #2147</text>
+  </g>
+  <!-- Channels -->
+  <g transform="translate(310,100)" font-family="ui-monospace, monospace" font-size="10">
+    <g>
+      <rect width="160" height="44" rx="10" fill="#0a0f1c" stroke="#22d3ee" stroke-width="1.2"/>
+      <text x="14" y="20" fill="#22d3ee" font-weight="700">SMS</text>
+      <text x="14" y="36" fill="#8b97a7">via Twilio</text>
+      <text x="142" y="28" text-anchor="end" fill="#10b981" font-size="9">●</text>
+    </g>
+    <g transform="translate(0,56)">
+      <rect width="160" height="44" rx="10" fill="#0a0f1c" stroke="#10b981" stroke-width="1.2"/>
+      <text x="14" y="20" fill="#10b981" font-weight="700">WhatsApp</text>
+      <text x="14" y="36" fill="#8b97a7">Meta cloud</text>
+      <text x="142" y="28" text-anchor="end" fill="#10b981" font-size="9">●</text>
+    </g>
+    <g transform="translate(0,112)">
+      <rect width="160" height="44" rx="10" fill="#0a0f1c" stroke="#d946ef" stroke-width="1.2"/>
+      <text x="14" y="20" fill="#d946ef" font-weight="700">Voice · Vapi</text>
+      <text x="14" y="36" fill="#8b97a7">LangGraph chat</text>
+      <text x="142" y="28" text-anchor="end" fill="#10b981" font-size="9">●</text>
+    </g>
+  </g>
+  <!-- Dashboard / kitchen feed -->
+  <g transform="translate(500,100)">
+    <rect width="240" height="170" rx="14" fill="#0a0f1c" stroke="#22324a"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#f59e0b" font-weight="700">KITCHEN · LIVE</text>
+    <circle cx="220" cy="18" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <g font-family="ui-monospace, monospace" font-size="10">
+      <g transform="translate(14,36)">
+        <rect width="212" height="32" rx="6" fill="#1a1408"/>
+        <text x="10" y="14" fill="#e6edf3" font-weight="700">#2147 · veggie bowl</text>
+        <text x="10" y="26" fill="#10b981">02:14  preparing</text>
+      </g>
+      <g transform="translate(14,76)">
+        <rect width="212" height="32" rx="6" fill="#1a1408"/>
+        <text x="10" y="14" fill="#e6edf3" font-weight="700">#2148 · pasta + drink</text>
+        <text x="10" y="26" fill="#f59e0b">00:42  queued</text>
+      </g>
+      <g transform="translate(14,116)">
+        <rect width="212" height="32" rx="6" fill="#1a1408"/>
+        <text x="10" y="14" fill="#e6edf3" font-weight="700">#2149 · burger combo</text>
+        <text x="10" y="26" fill="#22d3ee">paid · Stripe ✓</text>
+      </g>
+    </g>
+  </g>
+  <text x="60" y="56" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="url(#ep-accent)">EchoPlate</text>
+  <text x="60" y="78" font-family="ui-monospace, monospace" font-size="12" fill="#f59e0b">voice · chat · realtime kitchen ops</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="AutoCampaign">
+  <defs>
+    <linearGradient id="ac-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1426"/>
+      <stop offset="100%" stop-color="#140c26"/>
+    </linearGradient>
+    <linearGradient id="ac-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#7c5cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#ac-bg)"/>
+  <!-- Funnel -->
+  <g transform="translate(110,110)">
+    <path d="M0 0 L260 0 L210 50 L210 130 L50 130 L50 50 Z" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="130" y="-8" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#3b82f6" font-weight="700">10,000 LEADS</text>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#e6edf3">
+      <text x="130" y="22" text-anchor="middle">SMS · Twilio</text>
+      <text x="130" y="50" text-anchor="middle" fill="#7c5cff">SMS · Telnyx</text>
+      <text x="130" y="78" text-anchor="middle" fill="#22d3ee">Email blast</text>
+      <text x="130" y="106" text-anchor="middle" fill="#10b981">Poll · join link</text>
+      <text x="130" y="124" text-anchor="middle" fill="#f59e0b" font-weight="700">→ converted</text>
+    </g>
+  </g>
+  <!-- Dashboard with metrics -->
+  <g transform="translate(440,100)">
+    <rect width="300" height="170" rx="14" fill="#0a0f1c" stroke="#22324a"/>
+    <text x="16" y="26" font-family="ui-monospace, monospace" font-size="11" fill="#7c5cff" font-weight="700">CAMPAIGN · #418</text>
+    <g font-family="ui-sans-serif, system-ui">
+      <text x="16" y="56" font-size="11" fill="#8b97a7">Sent</text>
+      <text x="16" y="76" font-size="18" font-weight="700" fill="#e6edf3">12,418</text>
+      <text x="110" y="56" font-size="11" fill="#8b97a7">Replies</text>
+      <text x="110" y="76" font-size="18" font-weight="700" fill="#22d3ee">3,204</text>
+      <text x="210" y="56" font-size="11" fill="#8b97a7">Conv.</text>
+      <text x="210" y="76" font-size="18" font-weight="700" fill="#10b981">8.7%</text>
+    </g>
+    <!-- bar chart -->
+    <g transform="translate(16,100)" fill="#3b82f6">
+      <rect width="22" height="44" rx="2"/>
+      <rect x="32" width="22" height="60" rx="2" fill="#7c5cff"/>
+      <rect x="64" width="22" height="36" rx="2"/>
+      <rect x="96" width="22" height="52" rx="2" fill="#7c5cff"/>
+      <rect x="128" width="22" height="28" rx="2"/>
+      <rect x="160" width="22" height="64" rx="2" fill="#22d3ee"/>
+      <rect x="192" width="22" height="40" rx="2"/>
+      <rect x="224" width="22" height="56" rx="2" fill="#7c5cff"/>
+      <rect x="256" width="22" height="48" rx="2"/>
+    </g>
+  </g>
+  <text x="60" y="56" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="url(#ac-accent)">AutoCampaign</text>
+  <text x="60" y="78" font-family="ui-monospace, monospace" font-size="12" fill="#8b97a7">bulk SMS · email · NestJS · Prisma · PostgreSQL</text>
+</svg>

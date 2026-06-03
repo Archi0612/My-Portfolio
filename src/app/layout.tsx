@@ -4,6 +4,8 @@ import "./globals.css";
 import { LenisProvider } from "@/providers/LenisProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CodeBackdrop } from "@/components/layout/CodeBackdrop";
+import { CursorTrail } from "@/components/layout/CursorTrail";
 import { site } from "@/data/site";
 
 const display = Space_Grotesk({
@@ -67,6 +69,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <CodeBackdrop />
+        <CursorTrail />
         <LenisProvider>
           <Navbar />
           <main id="main">{children}</main>

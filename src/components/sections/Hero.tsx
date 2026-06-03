@@ -3,6 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Typewriter } from "@/components/ui/Typewriter";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { CodeWindowHero } from "@/components/ui/CodeWindowHero";
 import { withBasePath } from "@/lib/asset";
 import { site } from "@/data/site";
 
@@ -12,13 +13,7 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pb-16 pt-28"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" />
-        <div className="absolute -top-24 left-1/2 h-[420px] w-[620px] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 h-[300px] w-[420px] rounded-full bg-accent-2/10 blur-[120px]" />
-      </div>
-
-      <div className="container-px grid items-center gap-12 md:grid-cols-[1.3fr_1fr]">
+      <div className="container-px grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
         <div>
           <Reveal>
             <p className="mb-4 font-mono text-sm text-accent">Hi, my name is</p>
@@ -52,22 +47,7 @@ export function Hero() {
         </div>
 
         <Reveal delay={0.15} className="order-first md:order-last">
-          <div className="relative mx-auto w-56 sm:w-72 md:w-full md:max-w-sm">
-            <div className="absolute -inset-4 rounded-[2rem] bg-accent/15 blur-2xl" aria-hidden />
-            <div className="animate-float glass relative aspect-square overflow-hidden rounded-[2rem] border border-border">
-              {/* Plain <img> + withBasePath: next/image does not prefix basePath for
-                  static /public images under output:'export', which 404s on GitHub Pages. */}
-              <img
-                src={withBasePath("/images/profile.jpg")}
-                alt={`${site.name}, ${site.role}`}
-                width={640}
-                height={640}
-                loading="eager"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
+          <CodeWindowHero />
         </Reveal>
       </div>
     </section>

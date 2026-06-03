@@ -20,18 +20,13 @@ export interface SkillCategory {
   skills: Skill[];
 }
 
-export interface ExperienceProject {
-  name: string;
-  description: string;
-  tags: string[];
-}
-
 export interface Job {
   company: string;
   role: string;
   period: string;
   summary: string;
-  projects: ExperienceProject[];
+  /** short bullet wins shown under the summary on each role */
+  highlights?: string[];
   current?: boolean;
 }
 
@@ -44,8 +39,11 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  /** empty array allowed — company projects intentionally have no public link */
   links: ProjectLink[];
   featured?: boolean;
+  /** marks production / company work (no source link, "Private — proprietary" label) */
+  proprietary?: boolean;
   /** optional Tailwind gradient stops for the card header, e.g. "from-accent/25 to-accent-2/10" */
   accent?: string;
   /** optional /public image path (next/image handles basePath) */

@@ -160,6 +160,19 @@ html.lenis body {
   }
 }
 
+@keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* The native cursor arrow stays visible — CursorTrail adds an ambient glow
+   that follows the pointer without replacing it. */
+
 /* ───────────────────────── Reduced motion ───────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   html {
