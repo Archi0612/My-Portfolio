@@ -31,12 +31,13 @@ export function Footer() {
           </p>
         </div>
 
-        <SocialLinks />
+        {/* <SocialLinks /> */}
 
         <button
           type="button"
           onClick={() => scrollToSection("#home")}
           aria-label="Back to top"
+          suppressHydrationWarning
           className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition hover:-translate-y-0.5 hover:border-accent/50 hover:text-accent"
         >
           <FaArrowUp className="h-4 w-4" />

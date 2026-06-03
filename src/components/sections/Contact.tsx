@@ -136,6 +136,7 @@ export function Contact() {
                   required
                   className={inputClass}
                   placeholder="Your name"
+                  suppressHydrationWarning
                 />
               </div>
               <div>
@@ -149,6 +150,7 @@ export function Contact() {
                   required
                   className={inputClass}
                   placeholder="you@example.com"
+                  suppressHydrationWarning
                 />
               </div>
             </div>
@@ -163,6 +165,7 @@ export function Contact() {
                 required
                 className={inputClass}
                 placeholder="What's this about?"
+                suppressHydrationWarning
               />
             </div>
             <div>
@@ -176,12 +179,14 @@ export function Contact() {
                 rows={5}
                 className={cn(inputClass, "resize-none")}
                 placeholder="Tell me a little about it…"
+                suppressHydrationWarning
               />
             </div>
 
             <button
               type="submit"
               disabled={status === "loading"}
+              suppressHydrationWarning
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-[#04141a] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "loading" ? "Sending…" : "Send message"}
