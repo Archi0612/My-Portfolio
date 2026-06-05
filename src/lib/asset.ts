@@ -1,9 +1,9 @@
 /**
- * Prefix a /public asset path with the GitHub Pages basePath in production.
- * Use for non-next/image references: resume PDF, OG image, raw <img>, downloads.
- * (next/image and <Link> already prepend basePath automatically.)
+ * Normalize a /public asset path (and prefix an optional base path, unset on Vercel).
+ * Absolute URLs (e.g. the Google Drive resume link) pass through untouched.
  */
 export const withBasePath = (path: string): string => {
+  if (/^https?:\/\//.test(path)) return path;
   const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const clean = path.startsWith("/") ? path : `/${path}`;
   return `${base}${clean}`;

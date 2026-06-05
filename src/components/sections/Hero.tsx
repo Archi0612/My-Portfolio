@@ -34,7 +34,7 @@ export function Hero() {
               <Button href="#projects" variant="primary">
                 View My Work <FaArrowRightLong className="h-4 w-4" />
               </Button>
-              <Button href={withBasePath(site.resume)} variant="secondary" download newTab>
+              <Button href={withBasePath(site.resume)} variant="secondary" newTab>
                 Resume <FaDownload className="h-4 w-4" />
               </Button>
             </div>

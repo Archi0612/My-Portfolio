@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import emailjs from "@emailjs/browser";
 import { FaEnvelope, FaPhone, FaLocationDot, FaArrowRightLong } from "react-icons/fa6";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { site } from "@/data/site";
-import { emailjsConfig, emailjsConfigured } from "@/lib/emailjs";
 import { cn } from "@/lib/cn";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -43,27 +41,34 @@ export function Contact() {
       setMessage("Please enter a valid email address.");
       return;
     }
-    if (!emailjsConfigured) {
-      setStatus("error");
-      setMessage(`Email isn't configured yet — please reach me directly at ${site.email}.`);
-      return;
-    }
-
     try {
       setStatus("loading");
       setMessage("");
-      await emailjs.send(
-        emailjsConfig.serviceId,
-        emailjsConfig.templateId,
-        { name, email, subject, message: body, time: new Date().toLocaleString() },
-        { publicKey: emailjsConfig.publicKey },
-      );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message: body,
+          company: (data.get("company") as string) ?? "",
+        }),
+      });
+      if (!res.ok) {
+        const payload = (await res.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(payload?.error ?? "");
+      }
       setStatus("success");
       setMessage("Thanks! Your message has been sent — I'll get back to you soon.");
       form.reset();
-    } catch {
+    } catch (err) {
       setStatus("error");
-      setMessage("Something went wrong while sending. Please try again or email me directly.");
+      setMessage(
+        err instanceof Error && err.message
+          ? err.message
+          : `Something went wrong while sending. Please try again or email me directly at ${site.email}.`,
+      );
     }
   };
 
