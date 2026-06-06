@@ -12,7 +12,8 @@ export const site = {
   email: "archi061234@gmail.com",
   phone: "+91 7383800612",
   /** Google Drive share link — keep the file shared as "Anyone with the link → Viewer" */
-  resume: "https://drive.google.com/file/d/1TY38ZLaqOBVnwT0Skk571slfWPFqSeN_/view?usp=sharing",
+  resume:
+    "https://drive.google.com/file/d/1cubZJ0RmSJ2cOA1Xji8c80BOFNNNr_mU/view?usp=sharing",
   url: "https://archi0612.github.io/My-Portfolio/",
 
   tagline:
